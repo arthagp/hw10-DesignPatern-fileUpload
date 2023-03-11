@@ -64,7 +64,7 @@ class UsersController {
     }
   };
 
-  static deleteMoviesById = async (req, res) => {
+  static deleteUsersById = async (req, res) => {
     try {
       const { id } = req.params;
       const dataId = await UsersServices.getAllUsersByIdService(id);
@@ -74,7 +74,7 @@ class UsersController {
           message: "Id Does Not Exist",
         });
       } else {
-        const data = await UsersServices.updateUsersService(users);
+        const data = await UsersServices.deleteUsersById(id);
         res.status(200).json({
           status: "succes",
           message: "Delete Data Succesfuly",

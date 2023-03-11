@@ -38,7 +38,7 @@ class UsersServices{
         }
     }
 
-    static deleteMoviesById = async (id) => {
+    static deleteUsersById = async (id) => {
         try {
             const data = await usersRepo.deleteUsersByIdRepo(id);
             return data;

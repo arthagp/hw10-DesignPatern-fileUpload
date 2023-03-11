@@ -41,7 +41,7 @@ class MoviesModels {
   static updateUsers = async (users) => {
     const { id, email, gender, password, role} = users;
     const updateUsers = `UPDATE users 
-                          SET title = $2, genres = $3, year = $4
+                          SET email = $2, gender = $3, password = $4, role = $5
                           WHERE id = $1
                           RETURNING *`;
 
